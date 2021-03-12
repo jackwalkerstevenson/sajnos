@@ -1,6 +1,7 @@
-# sajnos
+# ſajnos
+## ('sajnos' for technical github reasons)
 
-Replaces 's' characters with long s 'ſ' according to the 18th-century rules described on Wikipedia.
+Replaces 's' characters with long s 'ſ' according to the 18th-century rules described [on Wikipedia](https://en.wikipedia.org/wiki/Long_s#Rules).
 
 Replace s with ſ except:
 
