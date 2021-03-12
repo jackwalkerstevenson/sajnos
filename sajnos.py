@@ -1,9 +1,16 @@
-"""Replace 's' characters with long s 'ſ' according to the 18th-century rules
-described on Wikipedia.
+"""Replace 's' characters with long s 'ſ'
+
+Arguments:
+filename -- path/name of input file
+
+Replaces 's' characters in a file with long s 'ſ' according to the
+18th-century rules described on Wikipedia.
 -replace s with ſ except:
 -always round s at end of word (except abbreviations, but not handling this)
 -always round s before apostrophe
 -always round s adjacent to f
+
+Output is a file with '_long' appended to the root of the filename.
 """
 import sys
 import string
