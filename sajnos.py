@@ -16,6 +16,7 @@ import sys
 import string
 from os import path
 
+
 def replace(i, char):
     if char == 's':
         try:  # set previous char
@@ -25,10 +26,11 @@ def replace(i, char):
         try:  # set next char
             next_char = line[i+1]
         except IndexError:
-            next_char = ' ' # if last char, whitespace next char for s
-        try: next_next_char = line[i+2]  # set two chars down
+            next_char = ' '  # if last char, whitespace next char for s
+        try:
+            next_next_char = line[i+2]  # set two chars down
         except IndexError:
-            # if no next-next, dummy whitespace so terminal ' doesn't preserve s
+            # if no next-next, dummy space so terminal ' doesn't preserve s
             next_next_char = ' '
         # preserve s before and after 'f'
         if next_char == 'f' or prev_char == 'f':
@@ -46,8 +48,8 @@ def replace(i, char):
 
 
 filename = sys.argv[1]  # input corpus
-root,ext = path.splitext(filename)
-with open (filename, 'r') as f:
+root, ext = path.splitext(filename)
+with open(filename, 'r') as f:
     corpus = f.readlines()
 lines = []  # list of output lines
 
@@ -55,7 +57,7 @@ replacement_char = 'ſ'
 for line in corpus:
     result = ''
     for i, char in enumerate(line):  # check each char for replacement
-        result += (replace(i,char))
+        result += (replace(i, char))
     lines.append(result)
-with open (root + '_long' + ext, 'w') as f:
+with open(root + '_long' + ext, 'w') as f:
     f.writelines(lines)
