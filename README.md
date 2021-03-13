@@ -13,4 +13,4 @@ Usage: download sajnos.py and run in the command line. Specify a source file, e.
 ```
 $ python sajnos.py example.txt
 ```
-Output: a new file ``example_long.txt``
+Output: a new file ``example_long.txt`` in the same directory as the input file.
