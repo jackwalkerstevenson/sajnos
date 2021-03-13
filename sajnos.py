@@ -14,7 +14,7 @@ Output is a file with '_long' appended to the root of the filename.
 """
 import sys
 import string
-from os import path
+import os
 
 
 def replace(i, char):
@@ -48,7 +48,7 @@ def replace(i, char):
 
 
 filename = sys.argv[1]  # input corpus
-root, ext = path.splitext(filename)
+root, ext = os.path.splitext(filename)
 with open(filename, 'r') as f:
     corpus = f.readlines()
 lines = []  # list of output lines
